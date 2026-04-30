@@ -1,26 +1,174 @@
 @import "tailwindcss";
 
+@theme {
+  --color-neon: #00ff9f;
+  --color-dark: #050505;
+  --color-card: #0a0a0a;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #050505;
+  --foreground: #ffffff;
+  --neon: #00ff9f;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Outfit', sans-serif;
+  overflow-x: hidden;
+  cursor: none; /* Hide default cursor for custom follower */
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #00ff9f;
+  border-radius: 10px;
+}
+
+/* Background Patterns */
+.bg-grid {
+  background-image: radial-gradient(circle at 1px 1px, rgba(0, 255, 159, 0.07) 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+.bg-dots {
+  background-image: radial-gradient(rgba(0, 255, 159, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.bg-grid-small {
+  background-image: linear-gradient(rgba(0, 255, 159, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 159, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.noise-overlay {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.05;
+  background-image: url("https://res.cloudinary.com/dzv9rqg49/image/upload/v1661440733/noise_v9u7ue.png");
+  animation: noise 0.2s infinite;
+}
+
+@keyframes noise {
+  0% { transform: translate(0,0) }
+  10% { transform: translate(-5%,-5%) }
+  20% { transform: translate(-10%,5%) }
+  30% { transform: translate(5%,-10%) }
+  40% { transform: translate(-5%,15%) }
+  50% { transform: translate(-10%,5%) }
+  60% { transform: translate(15%,0) }
+  70% { transform: translate(0,10%) }
+  80% { transform: translate(-15%,0) }
+  90% { transform: translate(10%,5%) }
+  100% { transform: translate(5%,0) }
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-neon {
+  background: rgba(0, 255, 159, 0.01);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 255, 159, 0.1);
+}
+
+/* Neon Glows */
+.glow-text {
+  text-shadow: 0 0 10px rgba(0, 255, 159, 0.5);
+}
+
+.glow-border {
+  box-shadow: 0 0 15px rgba(0, 255, 159, 0.2);
+}
+
+.glow-box {
+  box-shadow: 0 0 30px rgba(0, 255, 159, 0.1);
+}
+
+/* Animations */
+.reveal-text {
+  overflow: hidden;
+}
+
+.reveal-text span {
+  display: inline-block;
+  transform: translateY(100%);
+}
+
+/* Cursor Follower */
+.cursor-follower {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: #00ff9f;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  box-shadow: 0 0 20px #00ff9f;
+  mix-blend-mode: difference;
+  transition: transform 0.1s ease-out;
+  will-change: transform;
+}
+
+.cursor-ring {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #00ff9f;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transition: all 0.3s ease-out;
+  will-change: transform;
+}
+
+.cursor-hover .cursor-follower {
+  transform: scale(2.5);
+  background: white;
+  mix-blend-mode: normal;
+}
+
+.cursor-hover .cursor-ring {
+  width: 80px;
+  height: 80px;
+  border-color: #00ff9f;
+  background: rgba(0, 255, 159, 0.1);
+}
+
+/* Lenis Recommended CSS */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }
