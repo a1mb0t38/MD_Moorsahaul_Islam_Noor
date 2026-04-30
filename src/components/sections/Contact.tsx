@@ -20,9 +20,9 @@ const Contact = () => {
 
             <div className="space-y-6">
               {[
-                { icon: Mail, label: "Secure Email", val: "noor@cipher.net" },
-                { icon: Phone, label: "VoIP", val: "+44 1632 960111" },
-                { icon: MapPin, label: "Node Location", val: "Global / Remote" },
+                { icon: Mail, label: "Secure Email", val: "mursahaulnur17@gmail.com" },
+                { icon: Phone, label: "Signal / WhatsApp", val: "+8801913540968" },
+                { icon: MapPin, label: "Node Location", val: "Dhaka, Bangladesh" },
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-6 group cursor-pointer">
                   <div className="w-12 h-12 glass-neon flex items-center justify-center text-neon group-hover:bg-neon group-hover:text-dark transition-all">
