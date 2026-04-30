@@ -10,6 +10,9 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "MD. Moorsahaul Islam Noor | Visual UX/UI Designer & Web Developer",
   description: "Portfolio of MD. Moorsahaul Islam Noor, a visual UX/UI designer and web developer.",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({

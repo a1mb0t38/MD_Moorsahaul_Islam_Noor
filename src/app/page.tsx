@@ -53,7 +53,7 @@ export default function Home() {
       <Skills />
       <Resume />
       <Contact />
-      
+
       <footer className="py-12 border-t border-white/5 text-center">
         <p className="text-zinc-600 text-[10px] uppercase tracking-[0.5em]">
           © 2026 MD. Moorsahaul Islam Noor // Secured by Neural Encryption

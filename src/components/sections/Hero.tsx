@@ -10,7 +10,7 @@ const Hero = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const [text, setText] = useState("");
   const fullText = "Fullstack Developer | Security Researcher";
-  
+
   useEffect(() => {
     let index = 0;
     const interval = setInterval(() => {
@@ -23,12 +23,12 @@ const Hero = () => {
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    
+
     const ctx = gsap.context(() => {
       if (titleRef.current) {
         const chars = titleRef.current.innerText.split("");
         titleRef.current.innerHTML = chars.map(c => `<span class="inline-block translate-y-full opacity-0">${c === " " ? "&nbsp;" : c}</span>`).join("");
-        
+
         gsap.to(titleRef.current.querySelectorAll("span"), {
           y: 0,
           opacity: 1,
@@ -61,23 +61,24 @@ const Hero = () => {
       <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-neon/10 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: "2s" }} />
 
       <div className="container mx-auto px-6 relative z-10 text-center">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           className="mb-6 inline-block py-2 px-4 border border-neon/30 bg-neon/5 text-neon text-xs tracking-[0.3em] uppercase rounded-full glow-border"
         >
           Available for new projects
         </motion.div>
-        
-        <h1 ref={titleRef} className="text-5xl md:text-8xl lg:text-9xl font-black mb-8 tracking-tighter leading-none glow-text uppercase">
+
+        <h1 ref={titleRef} className="text-4xl md:text-7xl lg:text-8xl font-black mb-8 tracking-tighter leading-none glow-text uppercase">
           MD. Moorsahaul Islam
         </h1>
-        
+
         <div className="h-8 md:h-12 overflow-hidden flex justify-center items-center">
           <p className="text-xl md:text-3xl text-zinc-400 font-mono">
             {text}<span className="animate-pulse text-neon">_</span>
           </p>
         </div>
+
 
         <div className="mt-12 flex flex-wrap justify-center gap-6">
           <button className="group relative px-10 py-4 bg-neon text-dark font-black uppercase tracking-widest overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95">
