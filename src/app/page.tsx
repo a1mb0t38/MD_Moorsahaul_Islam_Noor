@@ -12,6 +12,8 @@ import Resume from "@/components/sections/Resume";
 import Contact from "@/components/sections/Contact";
 import CursorFollower from "@/components/ui/CursorFollower";
 
+import SocialSidebar from "@/components/ui/SocialSidebar";
+
 // --- Smooth Scroll Hook ---
 const useLenis = () => {
   useEffect(() => {
@@ -48,6 +50,7 @@ export default function Home() {
       <div className="noise-overlay" />
       <CursorFollower />
       <Navbar />
+      <SocialSidebar />
       <Hero />
       <About />
       <Skills />

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { TwitterIcon, FacebookIcon, LinkedinIcon, GithubIcon, InstagramIcon } from "../ui/SocialIcons";
 import { motion, AnimatePresence } from "framer-motion";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
@@ -26,6 +27,14 @@ const Navbar = () => {
     { name: "Skills", href: "#skills" },
     { name: "Resume", href: "#resume" },
     { name: "Contact", href: "#contact" },
+  ];
+
+  const socials = [
+    { icon: TwitterIcon, href: "#" },
+    { icon: FacebookIcon, href: "#" },
+    { icon: LinkedinIcon, href: "#" },
+    { icon: GithubIcon, href: "#" },
+    { icon: InstagramIcon, href: "#" },
   ];
 
   return (
@@ -77,16 +86,26 @@ const Navbar = () => {
             <button className="absolute top-8 right-8 text-neon" onClick={() => setIsOpen(false)}>
               <X size={32} />
             </button>
-            {links.map((link) => (
-              <a 
-                key={link.name} 
-                href={link.href} 
-                onClick={() => setIsOpen(false)}
-                className="text-3xl font-bold tracking-tighter hover:text-neon transition-colors"
-              >
-                {link.name}
-              </a>
-            ))}
+            <div className="flex flex-col items-center gap-6">
+              {links.map((link) => (
+                <a 
+                  key={link.name} 
+                  href={link.href} 
+                  onClick={() => setIsOpen(false)}
+                  className="text-3xl font-bold tracking-tighter hover:text-neon transition-colors"
+                >
+                  {link.name}
+                </a>
+              ))}
+            </div>
+            
+            <div className="mt-12 flex gap-6">
+              {socials.map((social, idx) => (
+                <a key={idx} href={social.href} className="text-zinc-500 hover:text-neon transition-colors">
+                  <social.icon width={24} height={24} />
+                </a>
+              ))}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
