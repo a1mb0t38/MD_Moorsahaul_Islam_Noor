@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛡️ Lumina Noir: Cyber-Hacker Portfolio
 
-## Getting Started
+[![Live Demo](https://img.shields.io/badge/Live-Demo-00ff9f?style=for-the-badge&logo=vercel&logoColor=black)](https://md-moorsahaul-islam-noor-git-main-a1mb0t38s-projects.vercel.app/#home)
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![GSAP](https://img.shields.io/badge/Animations-GSAP-green?style=for-the-badge&logo=greensock)](https://greensock.com/gsap/)
 
-First, run the development server:
+Welcome to the digital headquarters of **MD. Moorsahaul Islam Noor**. This is a high-performance, futuristic portfolio website designed for a **Cybersecurity Professional & Frontend Developer**.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🚀 Live Transmission
+**Access the live node here:**  
+🔗 [https://md-moorsahaul-islam-noor-git-main-a1mb0t38s-projects.vercel.app/](https://md-moorsahaul-islam-noor-git-main-a1mb0t38s-projects.vercel.app/#home)
+
+---
+
+## 🛠️ Tech Stack & Arsenal
+
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/) with Glassmorphism
+- **Animations**: [GSAP](https://greensock.com/gsap/) (ScrollTrigger) & [Framer Motion](https://www.framer.com/motion/)
+- **Scrolling**: [Lenis](https://github.com/darkroomengineering/lenis) for butter-smooth inertial scroll
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Form Handling**: [Web3Forms](https://web3forms.com/) with Next.js Server Actions
+
+---
+
+## ✨ Key Features
+
+### 1. ⚡ Ultra-High Performance
+Built with modular component architecture to ensure zero UI lag. Every animation is optimized using `gsap.quickTo` and hardware-accelerated transforms.
+
+### 2. 🕰️ Interactive Career Timeline
+A custom-built vertical timeline that tracks scroll progress. Milestone cards are expandable with Framer Motion, revealing detailed insights into academic and practical achievements.
+
+### 3. 🧪 Hacker Aesthetic
+- **Custom Cursor**: A glowing neon follower with physics-based movement.
+- **Glassmorphism**: Sleek, transparent UI elements with vibrant neon green accents (#00ff9f).
+- **Dynamic Backgrounds**: Parallax grid systems and animated noise overlays for a tactile, "OS" feel.
+
+### 4. ✉️ Secure Communication
+A fully functional contact form powered by **Server Actions**. Your transmissions are securely handled on the server, keeping API keys private and ensuring high reliability.
+
+---
+
+## 📂 Project Structure
+
+```text
+├── src/
+│   ├── app/            # Next.js App Router (Layouts, Actions, Page)
+│   ├── components/
+│   │   ├── layout/     # Global UI (Navbar, Footer)
+│   │   ├── sections/   # Individual Page Sections (Hero, About, Skills, etc.)
+│   │   └── ui/         # Reusable low-level components (CursorFollower)
+│   └── lib/            # Utility functions and shared logic
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Installation & Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Local Development
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Set up environment variables: Create a `.env` file and add `FORM_SEC=your_web3forms_key`
+4. Start the engine: `npm run dev`
 
-## Learn More
+### Deployment
+This project is optimized for deployment on **Vercel**. Simply push to your branch and the CI/CD pipeline will handle the rest.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 👤 Author: MD. Moorsahaul Islam Noor
+- **Major**: Cybersecurity (BSc in Software Engineering)
+- **Specialization**: Web Penetration Testing & Frontend Development
+- **Node**: Dhaka, Bangladesh
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+> "Securing the future, one line of code at a time." 🛡️
