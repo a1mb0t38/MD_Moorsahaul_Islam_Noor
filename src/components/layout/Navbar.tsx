@@ -22,12 +22,12 @@ const Navbar = () => {
   }, []);
 
   const links = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
-    { name: "Resume", href: "#resume" },
-    { name: "Blog", href: "#blog" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "#home", target: "_self" },
+    { name: "About", href: "#about", target: "_self" },
+    { name: "Skills", href: "#skills", target: "_self" },
+    { name: "Resume", href: "#resume", target: "_self" },
+    { name: "Blog", href: "#blog", target: "_self" },
+    { name: "Contact", href: "#contact", target: "_self" },
   ];
 
   const socials = [
