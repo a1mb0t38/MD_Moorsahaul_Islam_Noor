@@ -1,13 +1,17 @@
 "use client";
 
 import React, { useRef, useLayoutEffect } from "react";
+import Image from "next/image";
+import profilePic from "../../../public/profile.jpg";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const About = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const imgRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
     const ctx = gsap.context(() => {
       gsap.from(".about-text p", {
         y: 30,
@@ -43,13 +47,15 @@ const About = () => {
             className="relative aspect-square max-w-lg mx-auto lg:mx-0 overflow-hidden" 
             style={{ clipPath: "inset(100% 0% 0% 0%)" }}
           >
-            <img 
-              src="/profile.jpg" 
+            <Image 
+              src={profilePic} 
               alt="MD. Moorsahaul Islam Noor" 
-              className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+              fill
+              priority
+              className="object-cover grayscale hover:grayscale-0 transition-all duration-1000"
             />
-            <div className="absolute inset-0 border-[20px] border-dark/50" />
-            <div className="absolute inset-0 border border-neon/20" />
+            <div className="absolute inset-0 border-[20px] border-dark/50 pointer-events-none" />
+            <div className="absolute inset-0 border border-neon/20 pointer-events-none" />
           </div>
 
           <div className="about-text space-y-8">
