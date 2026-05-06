@@ -34,3 +34,10 @@ export const InstagramIcon = (props: React.SVGProps<SVGSVGElement>) => (
     <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
   </svg>
 );
+export const MediumIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <path d="M2.5 12c0 5.247 4.253 9.5 9.5 9.5s9.5-4.253 9.5-9.5S17.247 2.5 12 2.5 2.5 6.753 2.5 12" />
+    <path d="M9 12c0 3.314 1.343 6 3 6s3-2.686 3-6-1.343-6-3-6-3 2.686-3 6" />
+    <path d="M17 12c0 2.761.448 5 1 5s1-2.239 1-5-.448-5-1-5-1 2.239-1 5" />
+  </svg>
+);

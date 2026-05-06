@@ -44,7 +44,7 @@ const About = () => {
             style={{ clipPath: "inset(100% 0% 0% 0%)" }}
           >
             <img 
-              src="https://lh3.googleusercontent.com/aida/ADBb0ujjr50gXi2B3P2eQkpe3rW0E2bxglgwO7scEmwCUG4lC58UHE9EAKdpib1HVpQs9F5EwTEke6V0w18Ph4X-mczpJhhkV1GLCSmN7n2pUbNRD3nby0tgULYGDAdp60ixa-M947HWxfoTofwH8dsPerQeK9m6pcQ0ewr63d_H0gipbu2aqq7F71uwQZsca3n1dsSfPINNUp9-XoEodo0AxI1IIvYSvXXOZn2WHanjAVptKcpxoyIq16vCzbEow-sNi9x5oX8zaqOxOQ" 
+              src="/profile.jpg" 
               alt="MD. Moorsahaul Islam Noor" 
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
             />

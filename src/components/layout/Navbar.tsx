@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { TwitterIcon, FacebookIcon, LinkedinIcon, GithubIcon, InstagramIcon } from "../ui/SocialIcons";
+import { TwitterIcon, FacebookIcon, LinkedinIcon, GithubIcon, InstagramIcon, MediumIcon } from "../ui/SocialIcons";
 import { motion, AnimatePresence } from "framer-motion";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
@@ -26,6 +26,7 @@ const Navbar = () => {
     { name: "About", href: "#about" },
     { name: "Skills", href: "#skills" },
     { name: "Resume", href: "#resume" },
+    { name: "Blog", href: "#blog" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -33,7 +34,8 @@ const Navbar = () => {
     { icon: TwitterIcon, href: "#" },
     { icon: FacebookIcon, href: "#" },
     { icon: LinkedinIcon, href: "#" },
-    { icon: GithubIcon, href: "#" },
+    { icon: GithubIcon, href: "https://github.com/a1mb0t38" },
+    { icon: MediumIcon, href: "https://medium.com/@mursahaulnur17" },
     { icon: InstagramIcon, href: "#" },
   ];
 
@@ -59,6 +61,8 @@ const Navbar = () => {
             <a 
               key={link.name} 
               href={link.href} 
+              target={link.target}
+              rel={link.target === "_blank" ? "noopener noreferrer" : undefined}
               className="text-sm uppercase tracking-[0.2em] hover:text-neon transition-colors relative group"
             >
               {link.name}
@@ -91,6 +95,8 @@ const Navbar = () => {
                 <a 
                   key={link.name} 
                   href={link.href} 
+                  target={link.target}
+                  rel={link.target === "_blank" ? "noopener noreferrer" : undefined}
                   onClick={() => setIsOpen(false)}
                   className="text-3xl font-bold tracking-tighter hover:text-neon transition-colors"
                 >

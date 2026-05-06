@@ -2,13 +2,14 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { TwitterIcon, FacebookIcon, LinkedinIcon, GithubIcon, InstagramIcon } from "./SocialIcons";
+import { TwitterIcon, FacebookIcon, LinkedinIcon, GithubIcon, InstagramIcon, MediumIcon } from "./SocialIcons";
 
 const socialLinks = [
   { icon: TwitterIcon, href: "#", label: "Twitter" },
   { icon: FacebookIcon, href: "#", label: "Facebook" },
   { icon: LinkedinIcon, href: "https://www.linkedin.com/in/moorsahaul-islam-noor", label: "LinkedIn" },
   { icon: GithubIcon, href: "https://github.com/a1mb0t38", label: "GitHub" },
+  { icon: MediumIcon, href: "https://medium.com/@mursahaulnur17", label: "Medium" },
   { icon: InstagramIcon, href: "#", label: "Instagram" },
 ];
 

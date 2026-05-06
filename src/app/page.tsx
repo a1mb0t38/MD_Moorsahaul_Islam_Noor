@@ -9,6 +9,7 @@ import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import Skills from "@/components/sections/Skills";
 import Resume from "@/components/sections/Resume";
+import Blog from "@/components/sections/Blog";
 import Contact from "@/components/sections/Contact";
 import CursorFollower from "@/components/ui/CursorFollower";
 
@@ -55,6 +56,7 @@ export default function Home() {
       <About />
       <Skills />
       <Resume />
+      <Blog />
       <Contact />
 
       <footer className="py-12 border-t border-white/5 text-center">

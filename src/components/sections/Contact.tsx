@@ -38,7 +38,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 max-w-6xl mx-auto">
           <div className="space-y-10">
             <div>
-              <span className="text-neon uppercase tracking-[0.4em] text-sm">04. Link</span>
+              <span className="text-neon uppercase tracking-[0.4em] text-sm">05. Link</span>
               <h2 className="text-7xl font-black tracking-tighter mt-4">Initiate<br />Contact</h2>
             </div>
 
